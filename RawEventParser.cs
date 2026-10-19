@@ -2,8 +2,6 @@ namespace NxLogAnalyzer;
 
 public class RawEventParser
 {
-    private string[] EventType = Enum.GetNames(typeof(EventType));
-   
     //Beispiel String 15:23:44 (ugslmd) DENIED: "NX13100N" jdoe@WS01  (Licensed number of users already reached. (-4,342))
         public static bool TryParse(string line, out RawEvent? result)
         {
