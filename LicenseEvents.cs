@@ -1,5 +1,4 @@
 namespace NxLogAnalyzer;
 
-public record FullLicenceEntry(DateTime CheckoutTime, string LicenceName, string LicenceTaker, DateTime? ReturnTime);
-public record LicenceEvent (TimeOnly? CheckoutTime, TimeOnly? ReturnTime, string LicenceName, string LicenceTaker);
+public record FullLicenceEntry(string LicenceName, string LicenceTaker, TimeOnly? ReturnTime, TimeOnly CheckoutTime, DateOnly? CurrentDate, EventType Kind );
 public record RawEvent(TimeOnly CheckoutTime, string LicenceName, string LicenceTaker, EventType Kind);
